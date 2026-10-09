@@ -8,6 +8,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Koki 9">
 <meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="ikona-180.png">
 <title>Koki, nivo 9 otključan!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -389,6 +391,7 @@ function pressStart(){if(state!=='title')return;
   $('title').style.opacity='0';$('bottom').style.opacity='1';state=loaded?'intro':'load';T0=now();spawned=false;startMusic();}
 document.addEventListener('pointerdown',e=>{if(state==='title'){e.preventDefault();pressStart();}});
 function goFS(){const d=document.documentElement;if(document.fullscreenElement||document.webkitFullscreenElement)return;
+  if(navigator.standalone||matchMedia('(display-mode: fullscreen)').matches||matchMedia('(display-mode: standalone)').matches)return;
   const f=d.requestFullscreen||d.webkitRequestFullscreen;if(!f)return;try{const r=f.call(d,{navigationUI:'hide'});if(r&&r.catch)r.catch(()=>{});}catch(e){}}
 let fsTried=false;const fsOnce=()=>{if(fsTried)return;fsTried=true;goFS();};
 document.addEventListener('touchend',fsOnce,{passive:true});document.addEventListener('click',fsOnce);

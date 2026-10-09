@@ -1,0 +1,23 @@
+{
+ "name": "Koki, nivo 9 otključan!",
+ "short_name": "Koki 9",
+ "start_url": "./",
+ "scope": "./",
+ "display": "fullscreen",
+ "background_color": "#101a5c",
+ "theme_color": "#101a5c",
+ "icons": [
+  {
+   "src": "ikona-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "ikona-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}
